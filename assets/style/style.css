@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;    
+}
+input{
+    float: right;
+    clear: both;
+    background-color: transparent;
+    border: 0px solid;
+    height: 20px;
+    width: 160px;
+    color: black;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+select{
+    width: 18%;
+    background-color: transparent;
+    border: 0px solid;
+}
+select:focus{
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.compunding-intrest select{
+    float: right;
+    margin-right: -5%;
+    width: auto;
+    background-color: transparent;
+    border: 0px solid;
+}
+@media(max-width:600px){
+    .text-center{
+        margin-left: 40%;
+    }
+}
+table{
+    width: 100% !important;
+  
+}

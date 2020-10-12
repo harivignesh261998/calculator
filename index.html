@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+  
+
+</head>
+<body>
+    <div class="initial">
+        <div class="conatiner">
+            <div class="card mx-auto" style="width: 30rem;margin-top: 100px;">
+                <div class="card-body">
+                   <div class="row">
+                       <div class="col">
+                           <p>Initial Balance</p>
+                       </div>
+                       <div class="col">
+                        <input type="number" value="1000" style="direction:RTL;" id="inital-balance">
+                       </div>
+                       <span>&#8377;</span>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <p>Intrest Rate</p>
+                        </div>
+                        <div class="col">
+                         <input type="number" value="8" style="direction:RTL;" id="intrest">
+                        </div>
+                        <span>%</span>
+                     </div>
+                     <hr>
+                     <div class="row">
+                        <div class="col">
+                            <p>Term</p>
+                        </div>
+                        <div class="col">
+                            <input type="number" value="20" style="direction:RTL;" id="term">
+                        </div>
+                        <select id="term" style="margin-top: -4%;">
+                            <option value="saab">Years</option>
+                            <option value="volvo">Months</option>
+                            <option value="opel">Mon/Yrs</option>
+                            
+                          </select>           
+                     </div>
+                     <hr>
+                     <div class="row compunding-intrest">
+                        <div class="col">
+                            <p>Compounding frequency</p>
+                        </div>
+                        <div class="col">
+                            <select id="Compounding-frequency" >
+                                <option value="saab">yearly(1/Yr)</option>
+                                <option value="volvo">semi-annualy(2/Yr)</option>
+                                <option value="opel">quarterly(4/Yr)</option>
+                                <option value="opel">bi-monthly(6/Yr)</option>
+                                <option value="opel">monthly(12/Yr)</option>
+                                <option value="opel">bi-weekly(average)</option>
+                                <option value="opel">bi-weekly(26/Yr)</option>
+                                <option value="opel">weekly(average)</option>
+                                <option value="opel">weekly(52/Yr)</option>
+                                <option value="opel">daily(average)</option>
+                                <option value="opel">daily(360/Yr)</option>
+                                <option value="opel">daily(365/Yr)</option>
+                                <option value="opel">continous</option>   
+                              </select>       
+
+                        </div>
+                       
+                            
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="#" class="btn btn-unique" onclick="calc()">Calculate</a>
+        </div>
+    </div>
+
+    <div class="result" id="result" style="display: none;margin-top: 20px;">
+        <div class="container">
+            <div class="card mx-auto" style="width: 30rem">
+                <div class="card-header">
+                    <p>Results</p>
+                </div>
+                <div class="card-body">
+                    <p>The <strong>final Balance is &#8377;<span id="final_balance"></span></strong></p>
+                    <p>The <strong>total compound interest is &#8377;<span id="compond_intrest"></span></strong></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="resultant_table" style="margin-top:20px;display: none;" id="resultant_table">
+        <div class="conatiner">
+            <div class="card mx-auto" style="width: 30rem;">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col">
+                         <p>Balances</p>
+                        </div> 
+                        <div class="col">
+                            <p style="float: right;">Table</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Year</th>
+                            <th scope="col">Pricipal</th>
+                            <th scope="col">Yearly Intrest</th>
+                            <th scope="col">Total Intrest</th>
+                            <th scope="col">Total Balance</th>
+            
+                          </tr>
+                        </thead>
+                        <tbody id="mytable">
+                        
+                        </tbody>
+                      </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="./assets/js/script.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+</html>
